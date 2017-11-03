@@ -9,7 +9,7 @@
 zone={{ $zone }}
 {{ end }}
 
-{{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
+{{ range $host, $containers := groupByMulti $ "Env.EXTERNAL_DNS_HOST" "," }}
 host={{ $host }}
 topzone=$(echo "${host##*.}")
 
